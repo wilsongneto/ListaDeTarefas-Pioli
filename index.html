@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container">
+    <h1>Lista de Tarefas</h1>
+    <p class="sub">Projeto Front-end para iniciantes — HTML + CSS + JS</p>
+  </header>
+
+  <main class="container">
+    <form id="form" class="card" autocomplete="off">
+      <label for="tarefa">Nova tarefa</label>
+      <div class="row">
+        <input id="tarefa" type="text" placeholder="Ex.: Estudar 20 minutos" />
+        <button id="btnAdd" type="submit">Adicionar</button>
+      </div>
+      <small id="erro" class="erro" aria-live="polite"></small>
+    </form>
+
+    <section class="card">
+      <div class="toolbar">
+        <div class="filtros" role="group" aria-label="Filtros">
+          <button class="btn-filtro ativo" data-filtro="todas" type="button">Todas</button>
+          <button class="btn-filtro" data-filtro="ativas" type="button">Ativas</button>
+          <button class="btn-filtro" data-filtro="concluidas" type="button">Concluídas</button>
+        </div>
+        <button id="btnLimparConcluidas" class="sec" type="button">Limpar concluídas</button>
+      </div>
+      <ul id="lista" class="lista" aria-live="polite"></ul>
+      <div class="contadores">
+        <span>Total: <strong id="countTotal">0</strong></span>
+        <span>Concluídas: <strong id="countDone">0</strong></span>
+      </div>
+    </section>
+
+    <section class="card">
+      <details>
+        <summary>Salvar tarefas no navegador</summary>
+        <p class="muted">Ative para guardar a lista entre aberturas do arquivo.</p>
+        <label class="toggle">
+          <input id="persist" type="checkbox" />
+          <span>Ativar persistência (localStorage)</span>
+        </label>
+      </details>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p class="muted">Dicas: adicione, marque como concluída, exclua e filtre. — <span class="mono">HTML/CSS/JS puro</span></p>
+  </footer>
+
+  <template id="tplItem">
+    <li class="item">
+      <label class="item-linha">
+        <input class="chk" type="checkbox" />
+        <span class="texto"></span>
+      </label>
+      <div class="acoes">
+        <button class="btnDel" title="Excluir">🗑</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

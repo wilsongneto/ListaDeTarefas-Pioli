@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+}
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eefc;;
+}
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 16px;
+}
+header .sub {
+  color: #9db0cc;
+  margin-top: 4px;
+}
+.card {
+  background: #121a2c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px;
+  margin: 10px 0;
+}
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #9db0cc;
+}
+.row {
+  display: flex;
+  gap: 8px;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #0a1326;
+  color: #e6eefc;
+  font-size: 1rem;
+}
+button {
+  background: #0a1326;
+  color: #e6eefc;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  border-color: #6aa0ff;
+}
+button.sec {
+  opacity: 0.9;
+}
+.muted {
+  color: #9db0cc;
+}
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.erro {
+  color: #ef4444;
+  min-height: 18px;
+  display: block;
+  margin-top: 6px;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 10px 4px;
+}
+.item-linha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.item .texto {
+  font-size: 1rem;
+}
+.item.concluida .texto {
+  text-decoration: line-through;
+  color: #95a3bc;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.filtros {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.btn-filtro {
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+.btn-filtro.ativo {
+  border-color: #6aa0ff;
+}
+
+.contadores {
+  display: flex;
+  gap: 16px;
+  color: #9db0cc;
+  margin-top: 8px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.toggle input {
+  transform: scale(1.2);
+}
+
+@media (max-width: 560px) {
+  .row {
+    flex-direction: column;
+  }
+}
